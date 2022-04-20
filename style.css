@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {    
+--Lightish-Cyan: hsl(193, 38%, 86%);
+--Neonish-Green: hsl(150, 100%, 66%);
+--Lightish-Gray-Blue: hsl(217, 19%, 38%);
+--Darkish-Grayish-Blue: hsl(217, 19%, 24%);
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    background-color: var(--Darkish-Grayish-Blue);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 0.1px);
+}
+
+p {
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.box h1 {
+    color: var(--Neonish-Green);
+    letter-spacing: 7px;
+    font-size: 10px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.box p {
+    margin-bottom: 32px;
+    color: var(--Lightish-Cyan);
+    font-size: 20px;
+}
+
+.box picture img {
+    margin-bottom: 16px;
+    background-color: var(--Lightish-Gray-Blue);
+    position: relative;
+}
+
+.box picture::before {
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: var(--Lightish-Cyan);
+    right: 20px;
+    bottom: 60px;
+    position: absolute;
+    display: block;
+    z-index: 99;
+}
+
+.box picture::after {
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: var(--Lightish-Cyan);
+    left: 20px;
+    bottom: 60px;
+    position: absolute;
+    display: block;
+    z-index: 99;
+}
+
+.box button {
+    background-color: var(--Neonish-Green);
+    padding: 16px;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box button:hover {
+    background-color: hsl(150, 47%, 44%);
+}
+
+img {
+    max-width: 100%;
+}
+
+.box {
+    background-color: var(--Lightish-Gray-Blue);
+    padding: 20px 20px 32px;
+    border-radius: 16px;
+    position: relative;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 48px;
+    color: var(--Lightish-Cyan);
+}
+
+.attribution a {
+    color: hsl(228, 68%, 64%); 
+    transition: color 0.3s ease-in-out;
+}
+
+.attribution a:hover {
+    color: hsl(228, 39%, 47%); 
+}
+
+@media (min-width: 500px) {
+    .box {
+        max-width: 480px;
+    }
+}
